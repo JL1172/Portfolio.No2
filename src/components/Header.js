@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { StyledHeader } from "../styles/StyledHeader";
+import { StyledHeader } from "./styles/StyledHeader";
 import { useState } from "react";
 import {CgProfile} from "react-icons/cg";
 import {GrProjects} from "react-icons/gr";
 import {GoStack} from "react-icons/go";
 import {FaRegNewspaper} from "react-icons/fa";
 import {MdOutlineContacts} from "react-icons/md"
+import HeaderWords from "./extra/HeaderWords";
 
 const Header = (props) => {
     const [visible, setVisible] = useState(false);
@@ -37,9 +38,7 @@ const Header = (props) => {
                 </div>
                 }
             {!visible && <div id="content">
-                <h1>Hello, I am Jacob,
-                </h1>
-                <h1>nice to meet you.</h1>
+                <HeaderWords />
             </div>}
         </StyledHeader>
     )

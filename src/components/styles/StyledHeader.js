@@ -13,8 +13,10 @@ const kf = keyframes`
 
 export const StyledHeader = styled.div`
 
+min-height : 110vh;
 height : fit-content;
 width : 100%;
+
 
 
 display : flex;
