@@ -13,7 +13,6 @@ function App() {
   const [visible, setVisible] = useState(false);
   const [toolTip, setToolTip] = useState("");
   const changeRender = (val) => {
-    console.log(val)
     setRender(val);
   }
   const toolTipVisibilty = (value) => {

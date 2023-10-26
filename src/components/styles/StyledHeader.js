@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 
 
@@ -211,7 +211,7 @@ h1 {
         opacity : 1;
         width : 100%;
         filter : blur(0);
-        background-color: #EADFDF;
+        background-color: black;
         display : flex;
         justify-content : space-evenly;
         flex-direction : column;
