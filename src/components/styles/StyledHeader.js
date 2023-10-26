@@ -1,13 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-const kf = keyframes`
-0% {
-
-}
-100% {
-    transform : scaleY(100%);
-}
-`
 
 
 
@@ -31,6 +23,8 @@ flex-direction : column;
         color : inherit;
         font-weight : bolder;
         font-size : 16px;
+        display  :flex;
+        flex-direction : row;
         &:hover {
             color : rgb(68, 65, 65);
             transition : .2s ease-in-out;
@@ -49,8 +43,8 @@ flex-direction : column;
         content : "";
         position : absolute;
         border : 1px solid rgb(68, 65, 65);
-        top : 1.6rem;
-        left : 1.7rem;
+        top : 1.3rem;
+        left : 1.9rem;
         transition : .1s ease-in-out;
         opacity : 0;
     }
@@ -64,8 +58,8 @@ flex-direction : column;
     .two::before {
         content : "";
         position : absolute;
-        top : 1.6rem;
-        left : 2.2rem;
+        top : 1.3rem;
+        left : 2.4rem;
         opacity : 0;
         border : 1px solid rgb(68, 65, 65);
     }
@@ -80,7 +74,7 @@ flex-direction : column;
     .three::before {
         content : "";
         position : absolute;
-        top : 1.6rem;
+        top : 1.3rem;
         left : 3rem;
         border : 1px solid rgb(68, 65, 65);
         opacity : 0;
@@ -95,8 +89,8 @@ flex-direction : column;
     .four::before {
         content : "";
         position : absolute;
-        top : 1.6rem;
-        left : 2.3rem;
+        top : 1.3rem;
+        left : 2.4rem;
         border : 1px solid rgb(68, 65, 65);
         opacity : 0;
     }
@@ -109,8 +103,8 @@ flex-direction : column;
     .five::before {
         content : "";
         position : absolute;
-        top : 1.6rem;
-        left : 3.2rem;
+        top : 1.3rem;
+        left : 3rem;
         opacity : 0;
         border : 1px solid rgb(68, 65, 65);
     }
@@ -124,11 +118,17 @@ flex-direction : column;
 
 
 #conditional1 {
+    position : fixed;
+    top : 0;
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    z-index : 3;
     width : 100%;
     display : flex;
     justify-content  :space-between;
     align-items  :center;
     border-bottom : 1px solid #EADFDF;
+
 
     #icon {
         display : none;
@@ -155,7 +155,7 @@ flex-direction : column;
 
 
 #content {
-
+    margin-top : 10rem;
     width : 100%;
     display : flex;
     flex-direction : row;
@@ -163,7 +163,6 @@ flex-direction : column;
     flex-wrap : wrap;
     align-items : center;
     color : black;
-    margin-top : 4rem;
 }
 
 @media screen and (min-width: 701px)  and (max-width : 1000px) {
@@ -204,7 +203,11 @@ h1 {
     }
 
     .drawer {
+        position : fixed;
+        margin-bottom : 3rem;
+        padding-top : 2rem;
         z-index : 1;
+        border-bottom : 1px solid #EADFDF;
         opacity : 1;
         width : 100%;
         filter : blur(0);

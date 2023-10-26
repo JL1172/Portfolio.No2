@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import {StyledAbout} from "./styles/StyledAbout";
+import { GlobalContext } from "../contexts/GlobalContext";
 export default function About(props) {
+  const {render,changeRender} = useContext(GlobalContext);
   useEffect(()=> {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -8,14 +10,15 @@ export default function About(props) {
             entry.target.classList.add('show');
           } else {
             entry.target.classList.remove("show");
+            changeRender("")
           }
         })
       })
       const hiddenElements = document.querySelectorAll(".hidden");
       hiddenElements.forEach((el) => observer.observe(el));
-  },[])
+  },[changeRender])
     return (
-        <StyledAbout className="hidden">
+        <StyledAbout id = "about" className={render === "about" ? "show" : "hidden"}>
           <h3>About Me</h3>
           <div id = "outerContainer">
           <div id = "container1">I am a dedicated student currently enrolled at Bloom Institute of Technology, specializing in Full-stack web development. Additionally, I am pursuing a Bachelor's degree in Accounting with a focus on public accounting at GCU.</div>

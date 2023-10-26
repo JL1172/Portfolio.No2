@@ -21,7 +21,7 @@ align-items  :center;
     display : flex;
     align-items : baseline;
     height : 40vh;
-    margin-top : 15rem;
+    margin-top : 11rem;
     padding-left : 2rem;
     font-size : 140%;
     flex-direction : column;
@@ -239,7 +239,6 @@ div:nth-child(12) {
     align-items : baseline;
     height : 40vh;
     margin-top : 5rem;
-    padding-left : 2rem;
     font-size : 140%;
     flex-direction : column;
     }
