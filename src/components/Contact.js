@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import {StyledContact} from "./styles/StyledContact";
+import { GlobalContext } from "../contexts/GlobalContext";
 export default function Contact(props) {
+  const {render,changeRender} = useContext(GlobalContext);
   useEffect(()=> {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -8,14 +10,15 @@ export default function Contact(props) {
             entry.target.classList.add('show');
           } else {
             entry.target.classList.remove("show");
+            changeRender("")
           }
         })
       })
       const hiddenElements = document.querySelectorAll(".hidden");
       hiddenElements.forEach((el) => observer.observe(el));
-  },[])
+  },[changeRender])
     return (
-        <StyledContact className="hidden">
+        <StyledContact id = "contact" className={render === "contact" ? "show" : "hidden"}>
           contact
         </StyledContact>
     )

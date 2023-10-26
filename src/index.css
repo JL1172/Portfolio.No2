@@ -1,8 +1,15 @@
 body {
     margin: 0 !important;
-    
+    scroll-behavior: smooth !important;
 }
-
+a {
+    text-decoration: none !important;
+    color : inherit !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .material-symbols-outlined {
     font-variation-settings:
