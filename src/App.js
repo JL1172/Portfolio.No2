@@ -5,10 +5,19 @@ import Projects from "./components/Projects";
 import Stack from "./components/Stack";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { GlobalContext } from "./contexts/GlobalContext";
 
 function App() {
-  useEffect(()=>{
+  const [visible, setVisible] = useState(false);
+  const [toolTip, setToolTip] = useState("");
+  const toolTipVisibilty = (value) => {
+      setToolTip(value)
+  }
+  const changeVisibility = () => {
+    setVisible(!visible);
+  }
+  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -20,16 +29,18 @@ function App() {
     })
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));
-  },[])
+  }, [])
   return (
-    <StyledApp>
-      <Header />
-      <About />
-      <Projects />
-      <Stack />
-      <Resume />
-      <Contact />
-    </StyledApp>
+    <GlobalContext.Provider value={{ visible, changeVisibility, toolTip, toolTipVisibilty }}>
+      <StyledApp>
+        <Header />
+        <About />
+        <Projects />
+        <Stack />
+        <Resume />
+        <Contact />
+      </StyledApp>
+    </GlobalContext.Provider>
   );
 }
 

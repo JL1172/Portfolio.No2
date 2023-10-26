@@ -12,4 +12,23 @@ body {
         'opsz' 24
 }
 
+#img {
+    width: 20rem;
+    height: 40rem;
+    background-color: black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color : white;
+}
 
+.rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .1s ease-in-out;
+}
+.rows:hover {
+    transform: scale(102%);
+    transition: .1s ease-in-out;
+}

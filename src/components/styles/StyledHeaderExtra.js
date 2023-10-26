@@ -232,4 +232,16 @@ div:nth-child(12) {
     
 }
 }
+
+@media screen and (max-width : 700px) {
+    .words {
+    display : flex;
+    align-items : baseline;
+    height : 40vh;
+    margin-top : 5rem;
+    padding-left : 2rem;
+    font-size : 140%;
+    flex-direction : column;
+    }
+}
 `

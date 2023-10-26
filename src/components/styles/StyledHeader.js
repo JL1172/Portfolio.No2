@@ -158,11 +158,12 @@ flex-direction : column;
 
     width : 100%;
     display : flex;
-    flex-direction : column;
-    justify-content : center;
+    flex-direction : row;
+    justify-content : space-evenly;
+    flex-wrap : wrap;
     align-items : center;
     color : black;
-    margin-top : 2rem;
+    margin-top : 4rem;
 }
 
 @media screen and (min-width: 701px)  and (max-width : 1000px) {
@@ -175,17 +176,15 @@ flex-direction : column;
     }
 }
 @media screen and (max-width: 700px){
-
     
 #content {
-
+margin-bottom : 5rem;
 width : 100%;
 display : flex;
-flex-direction : column;
+flex-direction : column-reverse;
 justify-content : center;
 align-items : center;
 color : black;
-margin-top : 2rem;
 h1 {
     font-size : 18px;
 }
@@ -198,27 +197,24 @@ h1 {
 
 
     #icon {
-        display : flex !important;
+        display : block !important;
         color : black;
-        width : 3rem;
-        height : 3rem;
-        margin-right : 1rem;
-        margin-top : 1rem;
         cursor: pointer;
+        margin-right : 1rem;
     }
 
-
-
-    #drawer {
+    .drawer {
+        z-index : 1;
+        opacity : 1;
         width : 100%;
+        filter : blur(0);
         background-color: #EADFDF;
         display : flex;
         justify-content : space-evenly;
         flex-direction : column;
         align-items : center;
         transform-origin : top;
-        transform : scaleY(0%); 
-        animation : ${kf} .2s ease-in-out forwards;
+        transition : .3s ease-in-out;
         height : 100vh;
         .link {
             background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
