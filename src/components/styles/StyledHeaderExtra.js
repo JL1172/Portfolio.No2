@@ -233,6 +233,7 @@ div:nth-child(12) {
 }
 }
 
+
 @media screen and (max-width : 700px) {
     .words {
     display : flex;
