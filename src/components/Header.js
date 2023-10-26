@@ -7,18 +7,19 @@ import { FaRegNewspaper } from "react-icons/fa";
 import { MdOutlineContacts } from "react-icons/md"
 import HeaderWords from "./extra/HeaderWords";
 import { GlobalContext } from "../contexts/GlobalContext";
-import { Fab } from "@mui/material";
+import { Fab, Pagination } from "@mui/material";
 
 const Header = (props) => {
-    const { changeVisibility, visible, changeRender } = useContext(GlobalContext);
+    const { changeVisibility, visible, changeRender, currentPage, changePage, render } = useContext(GlobalContext);
     const specialRender = (text,e) => {
         changeVisibility();
         changeRender(text,e)
     }
+    
     return (
-        <StyledHeader>
+        <StyledHeader id = "home">
             <div id="conditional1"  >
-                <h3>Jacob's Portfolio</h3>
+                <h3><a href = "#home">Jacob's Portfolio</a></h3>
                 <div id="links">
                     <div className="link"><a onClick={(e) => changeRender("about", e)} className="link one" href="#about"><CgProfile />About /</a></div>
                     <div className="link"><a onClick={(e) => changeRender("projects", e)} className="link two" href="#projects"><GrProjects />Projects /</a></div>
@@ -43,6 +44,7 @@ const Header = (props) => {
             {!visible && <div id="content">
                 <div id="img">photo</div>
                 <HeaderWords />
+                <Pagination className= "hidden-page" id = "pageCount" count={3}  page = {currentPage} onChange={(e)=>changePage(e)} variant="outlined"  />
             </div>}
         </StyledHeader>
     )

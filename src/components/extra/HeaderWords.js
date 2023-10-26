@@ -1,3 +1,4 @@
+import { Pagination } from "reactstrap";
 import { StyledExtra } from "../styles/StyledHeaderExtra";
 
 export default function HeaderWords(props) {
