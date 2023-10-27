@@ -35,8 +35,8 @@ const Header = (props) => {
             </div>
             {visible && <div className="drawer">
                 {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended" ><a onClick={(e) => specialRender("about", e)} href="#about"><CgProfile style={{ width: "1.5rem", height: "1.5rem" }} />About Me</a></Fab></div>}
-                {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended"><a onClick={(e) => specialRender("projects", e)} href="#projects"><GrProjects style={{ width: "1.5rem", height: "1.5rem" }} />Projects</a></Fab></div>}
                 {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended"><a onClick={(e) => specialRender("stack", e)} href="#stack"><GoStack style={{ width: "1.5rem", height: "1.5rem" }} />Tech Stack</a></Fab></div>}
+                {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended"><a onClick={(e) => specialRender("projects", e)} href="#projects"><GrProjects style={{ width: "1.5rem", height: "1.5rem" }} />Projects</a></Fab></div>}
                 {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended"><a onClick={(e) => specialRender("resume", e)} href="#resume"><FaRegNewspaper style={{ width: "1.5rem", height: "1.5rem" }} />Resume</a></Fab></div>}
                 {visible && <div className="rows"><Fab sx={{ height: 80 }} className="rows" variant="extended"><a onClick={(e) => specialRender("contact", e)} href="#contact"><MdOutlineContacts style={{ width: "1.5rem", height: "1.5rem" }} />Contact Me</a></Fab></div>}
             </div>

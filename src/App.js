@@ -43,8 +43,8 @@ function App() {
       <StyledApp>
         <Header />
         <About />
-        <Projects />
         <Stack />
+        <Projects />
         <Resume />
         <Contact />
       </StyledApp>

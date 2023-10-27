@@ -20,7 +20,6 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
     transform-origin : bottom;
     background-color : black;
     color : white;
-
     transform : scaleY(100%) !important; 
  } 
  .hidden-text {
@@ -40,5 +39,9 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
     min-height : 50vh;
     transition-delay : 1.5s;
  }
+ 
+
+
+/* for styledstack */
 
 `
