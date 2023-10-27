@@ -9,6 +9,7 @@ min-height : 100vh;
 height : fit-content;
 width : 100%;
 margin-top : 2rem;
+padding-bottom : 4rem;
 
 .cardsAll {
    margin : 1rem;

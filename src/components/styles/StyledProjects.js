@@ -79,7 +79,26 @@ padding-bottom : 4rem;
     height : 1.5rem;
     color : dodgerblue;
 }
+#settingButton {
+    display : inline;
+    width : 15vw;
+}
 /* project one  */
+@media screen and ( max-width : 1200px) {
+    .project-cards-shown {
+    opacity : 1;
+    flex-wrap : wrap;
+    width : 90vw;
+    min-height : 50vh;
+    height : fit-content;
+    transition-delay : 1.5s;
+    z-index : 2;
+    padding : 1rem;
+}
+    #settingButton {
+        width : 50vw;
+    }
+}
 @media screen and (max-width : 700px) {
     .project-cards-shown {
     opacity : 1;
@@ -93,6 +112,10 @@ padding-bottom : 4rem;
 }
 #imgProject {
     height : 20vh;
+}
+#settingButton {
+    width : 50vw;
+    display : flex;
 }
 }
 `

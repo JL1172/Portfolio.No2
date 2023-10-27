@@ -11,7 +11,7 @@ import { styled } from '@mui/material/styles';
 import { useContext, useState } from 'react';
 import { BiLinkExternal, BiLogoCss3, BiLogoReact } from "react-icons/bi";
 import {FaNode} from "react-icons/fa"; 
-import { jwtProjectIMG, jwtProjectURl, stockMarketUrl } from '../../URLS/url-folder';
+import { jwtProjectIMG, jwtProjectURl } from '../../URLS/url-folder';
 import { SiAxios, SiStyledcomponents } from "react-icons/si";
 import {GoDatabase} from "react-icons/go";
 import { ProjectProvider } from '../../contexts/ProjectContext';
@@ -53,10 +53,10 @@ export default function ProjectTwo() {
             <CardHeader
                 action={
                     <IconButton aria-label="settings">
-                        <a href={jwtProjectURl} target='_blank' rel='noreferrer'><BiLinkExternal /></a>
+                        <a href={jwtProjectURl} target='_blank' rel='noreferrer'><BiLinkExternal style = {{color : "white"}} /></a>
                     </IconButton>
                 }
-                titleTypographyProps={{ fontFamily: "inherit", color: "white" }}
+                titleTypographyProps={{ color: "white" }}
                 title="Full-Stack Auth JWT-TOKEN App"
             />
             <CardMedia
@@ -66,7 +66,7 @@ export default function ProjectTwo() {
                 alt="Full-Stack Auth JWT-TOKEN App"
             />
             <CardContent>
-                <Typography style={{ color: "white", fontFamily: "inherit", zIndex : "2", backgroundColor : "black" }} variant="body2" color="text.secondary">
+                <Typography style={{ color: "white", zIndex : "2", backgroundColor : "black" }} variant="body2" color="text.secondary">
                 Welcome to my full-stack application! This project is a complete application that provides both a backend RESTful API and a stylish front-end user interface. The primary goal of this app is to enable user registration and login, granting them access to a personalized interface. Here are some key features and technologies used in this project.
                 </Typography>
             </CardContent>
@@ -83,8 +83,8 @@ export default function ProjectTwo() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent id="contentCard">
-                    <Typography style={{ fontFamily: "inherit" }} paragraph><h4 style={{color : "dodgerblue"}}>Features:</h4></Typography>
-                    <Typography style={{ fontFamily: "inherit" }} paragraph>
+                    <Typography s paragraph><h4 style={{color : "dodgerblue"}}>Features:</h4></Typography>
+                    <Typography  paragraph>
                         <div  style={{ display: "flex", flexDirection: "column",minHeight : "60vh", justifyContent : "space-evenly", zIndex : "2", backgroundColor : "black" }}>
                             <div> * Authentication and Authorization: We've implemented user authentication and authorization using JWT tokens and bcrypt for secure password hashing. This ensures that only authorized users can access specific parts of the application.</div>
                             <div>
@@ -102,7 +102,7 @@ export default function ProjectTwo() {
                         </div>
 
                     </Typography>
-                    <Typography style={{ fontFamily: "inherit" }} paragraph>
+                    <Typography  paragraph>
                         <h4 style={{color :'dodgerBlue'}}>Technologies Used :</h4>
                         <div style={{ display: "flex", flexDirection: "column", justifyContent : "space-evenly", minHeight : "50vh" }}>
                             <div><BiLogoReact className='projectIcons' />React: The core framework for building the web application.</div>
