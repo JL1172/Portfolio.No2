@@ -8,7 +8,7 @@ flex-direction : column;
 min-height : 100vh;
 height : fit-content;
 width : 100%;
-margin-top : 10rem;
+margin-top : 2rem;
 
 .cardsAll {
    margin : 1rem;
@@ -16,11 +16,12 @@ margin-top : 10rem;
    display : flex;
    justify-content : center;
    align-items  :center;
-    min-width : 8rem;
+    min-width : 30vw;
     height : 10rem;
     background-color : transparent;
     outline : 1px solid rgb(27, 27, 27);
-    flex-basis : 20vw;
+    flex-basis : 30vw;
+
     &:hover { 
       transform : scale(101%);
       box-shadow : 0 0 .2em gray;
@@ -81,9 +82,15 @@ margin-top : 10rem;
 
 .blue {
     background-color : royalblue;
-    display : flex;
-    flex-direction : column;
-    align-items : center;
+    margin : 1rem;
+   padding : 1rem;
+   display : flex;
+   justify-content : center;
+   align-items  :center;
+    min-width : 30vw !important;
+    height : 10rem;
+    outline : 1px solid rgb(27, 27, 27);
+    flex-basis : 30vw;
 }
 .textContent {
     color : white;
@@ -99,14 +106,27 @@ margin-top : 10rem;
     transition-delay : 1s;
 }
 #stackMe {
-    font-size : 20px;
+    font-size : 30px;
     margin-top : 3rem;
 }
 
+
+ .hidden-card-icon {
+    opacity : 0;
+    transform : scale(-10%);
+    transition : 1s all;
+}
+.show-card-icon {
+    opacity : 1;
+    transform : scale(100%);
+    transition : .2s ease-in-out;
+    transition-delay : .4s;
+    min-width : 30vw;
+} 
 @media screen and (max-width: 700px) {
    #stackCards {
    flex-wrap : wrap;
-   margin-top : 4rem;
+   margin-top : 2rem;
    margin-bottom : 6rem;
     display : flex;
     min-height : 60vw;
@@ -116,4 +136,10 @@ margin-top : 10rem;
 }
 
 }
+.show-card-icon {
+    opacity : 1;
+    transform : scale(100%);
+    transition : .2s ease-in-out;
+    transition-delay : .4s;
+} 
 `

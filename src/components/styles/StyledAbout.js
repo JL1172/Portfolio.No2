@@ -81,7 +81,8 @@ width : 100%;
         border-radius: 1rem;
         padding : .5rem;
         margin-bottom : 1rem;
-        background-color : whitesmoke;
+        color : white;
+        background-color : darkgray;
     }
     #pageCount:hover {
         box-shadow: 0 0 1em gray;
