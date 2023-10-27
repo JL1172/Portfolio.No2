@@ -17,23 +17,26 @@ width : 100%;
     display : flex;
     flex-direction : column;
     justify-content  : space-evenly;
+    align-items : center;
     min-height : 50vh;
     line-height : 2rem;
-    text-indent : 1.5rem;
 }
 #container1 {
     position : relative;
     width : 60vw;
+    text-indent : 1.5rem;
 }
 
 #container2 {
     position : relative;
     width : 60vw;
+    text-indent : 1.5rem;
 }
 
 #container3 {
     position : relative;
     width : 60vw;
+    text-indent : 1.5rem;
 }
 
 .span {
@@ -51,6 +54,9 @@ width : 100%;
 }
 @media screen and (max-width : 700px) {
     #outerContainer {
+    h2 {
+        margin-bottom : 2rem;
+    }
     padding-top : 1rem;
     padding-bottom : 3rem;
     display : flex;
@@ -69,16 +75,16 @@ width : 100%;
 @media screen and (max-width : 700px) {
 
     #pageCount {
-        margin-top : 2rem;
+        margin-top : 3rem;
         display: block;
         z-index: 2;
         border-radius: 1rem;
         padding : .5rem;
-        background-color: transparent;
+        margin-bottom : 1rem;
+        background-color : whitesmoke;
     }
     #pageCount:hover {
         box-shadow: 0 0 1em gray;
-        background-color : whitesmoke;
         transition: .1s ease-in-out;
     }
 }
@@ -90,6 +96,16 @@ width : 100%;
     transition : .4s ease-in-out;
     transition-delay : 1s;
  }
-
+ .span {
+   color : black;
+   background-color : white;
+   opacity : 0;
+}
+.span-seen {
+    opacity : 1;
+    background-color : white;
+    transition : .1s;
+    transition-delay : 0s;
+}
 
 `
