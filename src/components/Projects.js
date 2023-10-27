@@ -3,10 +3,16 @@ import { StyledProject } from "./styles/StyledProjects"
 import { GlobalContext } from "../contexts/GlobalContext";
 import { Pagination } from "@mui/material";
 import ProjectOne from "./extra/ProjectOne";
+import ProjectTwo from "./extra/ProjectTwo";
+import { ProjectProvider } from "../contexts/ProjectContext";
 
 export default function Projects(props) {
   const { render, changeRender } = useContext(GlobalContext);
+  const [activeProject,setActiveProject] = useState(1); 
   const [outOfFocus,setOutOfFocus] = useState(true); 
+  const changeProjectPage = (value) => {
+    setActiveProject(value); 
+  }
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -58,10 +64,13 @@ export default function Projects(props) {
     paginationHidden.forEach(el=> observer3.observe(el))
   }, [changeRender,outOfFocus])
   return (
+    <ProjectProvider.Provider value = {{activeProject}}>
     <StyledProject id="projects" className={render === "projects" ? "show" : "hidden"}>
-      <div className="project-title-shown" id="myProjects">Projects</div>
-      <ProjectOne />
-      <Pagination className="pagination-hidden" count={6} shape="rounded" variant="outlined" />
+      <div className="project-title-shown" >Projects</div>
+      {activeProject === 1 && <ProjectOne />}
+      {activeProject === 2 && <ProjectTwo />}
+      <Pagination onChange={(e)=> changeProjectPage(Number(e.target.textContent))} page={activeProject} className="pagination-hidden" count={4} shape="rounded" variant="outlined" />
     </StyledProject>
+    </ProjectProvider.Provider>
   )
 }

@@ -8,10 +8,13 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
-import { useEffect, useState } from 'react';
-import { BiLineChart, BiLinkExternal, BiLogoBootstrap, BiLogoCss3, BiLogoReact, BiLogoRedux } from "react-icons/bi";
+import { useContext, useEffect, useState } from 'react';
+import { BiLinkExternal, BiLogoCss3, BiLogoReact } from "react-icons/bi";
+import {FaNode} from "react-icons/fa"; 
 import { stockMarketUrl } from '../../URLS/url-folder';
 import { SiAxios, SiStyledcomponents } from "react-icons/si";
+import {GoDatabase} from "react-icons/go";
+import { ProjectProvider } from '../../contexts/ProjectContext';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -25,27 +28,28 @@ const ExpandMore = styled((props) => {
 }));
 
 
-export default function ProjectOne() {
-    useEffect(() => {
-        const observer4 = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('project-cards-shown');
-                } else {
-                    entry.target.classList.remove("project-cards-shown");
-                }
-            })
-        })
-        const project_cards_hidden = document.querySelectorAll(".project-cards-hidden");
-        project_cards_hidden.forEach(el => observer4.observe(el))
-    }, [])
+export default function ProjectTwo() {
+    const {activeProject} = useContext(ProjectProvider);
+    // useEffect(() => {
+    //     const observer4 = new IntersectionObserver((entries) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add('project-cards-shown');
+    //             } else {
+    //                 entry.target.classList.remove("project-cards-shown");
+    //             }
+    //         })
+    //     })
+    //     const project_cards_hidden = document.querySelectorAll(".project-cards-hidden");
+    //     project_cards_hidden.forEach(el => observer4.observe(el))
+    // }, [])
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
     return (
-        <Card style={{ backgroundColor: "black", outline: "2px solid rgb(27, 27, 27)" }} className="project-cards-hidden">
+        <Card style={{ backgroundColor: "transparent", outline: "2px solid rgb(27, 27, 27)" }} className="project-cards-shown" id = {activeProject ? "activeProject" : "notActiveProject"}>
             <CardHeader
                 action={
                     <IconButton aria-label="settings">
@@ -53,17 +57,17 @@ export default function ProjectOne() {
                     </IconButton>
                 }
                 titleTypographyProps={{ fontFamily: "inherit", color: "white" }}
-                title="Stock Market Trading App"
+                title="Full-Stack Auth JWT-TOKEN App"
             />
             <CardMedia
                 id="imgProject"
                 component="img"
-                image="https://onedrive.live.com/embed?resid=968B4C77C495090B%211084846&authkey=%21AH1_-T0KEBFZrEM&width=1904&height=952"
-                alt="Stock Market App"
+                image="https://onedrive.live.com/embed?resid=968B4C77C495090B%211084847&authkey=%21AD7-LKsoQhCB_14&width=1910&height=947"
+                alt="Full-Stack Auth JWT-TOKEN App"
             />
             <CardContent>
                 <Typography style={{ color: "white", fontFamily: "inherit", zIndex : "2", backgroundColor : "black" }} variant="body2" color="text.secondary">
-                    Welcome to the Stock Market Trading Simulator, a web application that allows you to practice trading with real-time data from Finnhub's APIs and Coingecko's API.
+                Welcome to my full-stack application! This project is a complete application that provides both a backend RESTful API and a stylish front-end user interface. The primary goal of this app is to enable user registration and login, granting them access to a personalized interface. Here are some key features and technologies used in this project.
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -82,45 +86,18 @@ export default function ProjectOne() {
                     <Typography style={{ fontFamily: "inherit" }} paragraph><h4 style={{color : "dodgerblue"}}>Features:</h4></Typography>
                     <Typography style={{ fontFamily: "inherit" }} paragraph>
                         <div  style={{ display: "flex", flexDirection: "column",minHeight : "60vh", justifyContent : "space-evenly", zIndex : "2", backgroundColor : "black" }}>
-                            <div> * Fetches real-time data from Finnhub's and Coingecko's APIs.</div>
+                            <div> * Authentication and Authorization: We've implemented user authentication and authorization using JWT tokens and bcrypt for secure password hashing. This ensures that only authorized users can access specific parts of the application.</div>
                             <div>
-                               * Dynamic Account Balance
+                               * Database Management: We've chosen SQLite3 as our Database Management System (DBMS) to store and manage user data and application information.
                             </div>
                             <div>
-                               * Your account balance is dynamic and adjusts with every buy or sell action.
+                               * Middleware: Throughout the project, we have incorporated middleware for input sanitization, error handling, and route protection on the server side. This ensures data security and robust functionality.
                             </div>
                             <div>
-                               * Total Equity Balance
+                               * Front-end Styling: The front-end of the application is not just functional but also visually appealing. We've used technologies like styled-components, Material-UI, and Bootstrap to create an attractive and user-friendly interface.
                             </div>
                             <div>
-                               * Keep track of your total equity balance, which reflects the current value of your portfolio.
-                            </div>
-                            <div>
-                               * Net Loss or Net Gain
-                            </div>
-                            <div>
-                               * Monitor your overall net loss or net gain balance.
-                            </div>
-                            <div>
-                               * Stock Lookup
-                            </div>
-                            <div>
-                               * Search for stocks and view essential information, including high, low, current value, closing price, previous closing price, and percent change.
-                            </div>
-                            <div>
-                               * Add stocks to your watchlist and track their growth or loss with trendlines. For more specific information, toggle a switch.
-                            </div>
-                            <div>
-                               * Watchlist
-                            </div>
-                            <div>
-                               * Buy shares, and they will be added to your portfolio. Watch your dynamic values update as you make transactions.
-                            </div>
-                            <div>
-                               * Profit and Loss Tracking
-                            </div>
-                            <div>
-                               * Easily navigate to see a breakdown of your profit or loss with just one click.
+                               * React Router: We've employed React Router to handle client-side routing, allowing users to navigate the application seamlessly.
                             </div>
                         </div>
 
@@ -129,12 +106,11 @@ export default function ProjectOne() {
                         <h4 style={{color :'dodgerBlue'}}>Technologies Used :</h4>
                         <div style={{ display: "flex", flexDirection: "column", justifyContent : "space-evenly", minHeight : "50vh" }}>
                             <div><BiLogoReact className='projectIcons' />React: The core framework for building the web application.</div>
-                            <div><BiLogoRedux className='projectIcons' />React-Redux: For state management and data persistence.</div>
                             <div><SiAxios className='projectIcons' /> Thunk: Middleware for handling asynchronous API calls.</div>
-                            <div><BiLineChart className='projectIcons' />Recharts: Used for displaying chart information.</div>
                             <div><SiStyledcomponents className="projectIcons" /> Styled Components: For styling the components.</div>
-                            <div><BiLogoBootstrap className='projectIcons' />Reactstrap: Provides pre-built React components for UI elements.</div>
                             <div><BiLogoCss3 className='projectIcons' />CSS: Used for additional styling.</div>
+                            <div><FaNode className="projectIcons" />Node/Express : Used for RESTful API</div>
+                            <div><GoDatabase className="projectIcons" />SQLite3 : Used Database Management</div>
                         </div>
                     </Typography>
                 </CardContent>

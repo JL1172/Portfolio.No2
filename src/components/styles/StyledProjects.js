@@ -10,9 +10,6 @@ height : fit-content;
 width : 100%;
 margin-top : 2rem;
 padding-bottom : 4rem;
-#myProjects {
-    font-size : 20px;
-}
 
 /* hidden */
 .project-title-shown {
@@ -22,11 +19,12 @@ padding-bottom : 4rem;
     transition : 1s;
 }
 .project-title-hidden {
-    opacity : 1;
-    color : black;
+    opacity : 0 ;
+    color : black !important;
     transition : 1s;
-    z-index : -1;
+    z-index : -5;
     transition-delay : 1s;
+    font-size : 20px;
 }
 .project-cards-hidden {
     opacity : 0;
@@ -36,7 +34,7 @@ padding-bottom : 4rem;
     margin-top : 5rem;
     opacity : 1;
     flex-wrap : wrap;
-    min-height : 50vh;
+    min-height : 40vh;
     height : fit-content;
     width : 50vw;
 
@@ -87,11 +85,10 @@ padding-bottom : 4rem;
     opacity : 1;
     flex-wrap : wrap;
     width : 98vw;
-    min-height : 70vh;
+    min-height : 50vh;
     height : fit-content;
     transition-delay : 1.5s;
     z-index : 2;
-    background-color : (34, 34, 34);
     padding : 1rem;
 }
 #imgProject {
