@@ -49,10 +49,10 @@ export default function ProjectOne() {
             <CardHeader
                 action={
                     <IconButton aria-label="settings">
-                        <a href={stockMarketUrl} target='_blank' rel='noreferrer'><BiLinkExternal /></a>
+                        <a href={stockMarketUrl} target='_blank' rel='noreferrer'><BiLinkExternal style = {{color : "white"}} /></a>
                     </IconButton>
                 }
-                titleTypographyProps={{ fontFamily: "inherit", color: "white" }}
+                titleTypographyProps={{  color: "white" }}
                 title="Stock Market Trading App"
             />
             <CardMedia
@@ -62,7 +62,7 @@ export default function ProjectOne() {
                 alt="Stock Market App"
             />
             <CardContent>
-                <Typography style={{ color: "white", fontFamily: "inherit", zIndex : "2", backgroundColor : "black" }} variant="body2" color="text.secondary">
+                <Typography style={{ color: "white", zIndex : "2", backgroundColor : "black" }} variant="body2" color="text.secondary">
                     Welcome to the Stock Market Trading Simulator, a web application that allows you to practice trading with real-time data from Finnhub's APIs and Coingecko's API.
                 </Typography>
             </CardContent>
@@ -79,8 +79,8 @@ export default function ProjectOne() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent id="contentCard">
-                    <Typography style={{ fontFamily: "inherit" }} paragraph><h4 style={{color : "dodgerblue"}}>Features:</h4></Typography>
-                    <Typography style={{ fontFamily: "inherit" }} paragraph>
+                    <Typography  paragraph><h4 style={{color : "dodgerblue"}}>Features:</h4></Typography>
+                    <Typography paragraph>
                         <div  style={{ display: "flex", flexDirection: "column",minHeight : "60vh", justifyContent : "space-evenly", zIndex : "2", backgroundColor : "black" }}>
                             <div> * Fetches real-time data from Finnhub's and Coingecko's APIs.</div>
                             <div>
@@ -125,7 +125,7 @@ export default function ProjectOne() {
                         </div>
 
                     </Typography>
-                    <Typography style={{ fontFamily: "inherit" }} paragraph>
+                    <Typography paragraph>
                         <h4 style={{color :'dodgerBlue'}}>Technologies Used :</h4>
                         <div style={{ display: "flex", flexDirection: "column", justifyContent : "space-evenly", minHeight : "50vh" }}>
                             <div><BiLogoReact className='projectIcons' />React: The core framework for building the web application.</div>

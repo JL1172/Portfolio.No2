@@ -5,6 +5,8 @@ import { Pagination } from "@mui/material";
 import ProjectOne from "./extra/ProjectOne";
 import ProjectTwo from "./extra/ProjectTwo";
 import ProjectThree from "./extra/ProjectThree";
+import ProjectFour from "./extra/ProjectFour"; 
+import ProjectFive from "./extra/ProjectFive";
 import { ProjectProvider } from "../contexts/ProjectContext";
 
 export default function Projects(props) {
@@ -71,7 +73,9 @@ export default function Projects(props) {
       {activeProject === 1 && <ProjectOne />}
       {activeProject === 2 && <ProjectTwo />}
       {activeProject === 3 && <ProjectThree />}
-      <Pagination onChange={(e)=> changeProjectPage(Number(e.target.textContent))} page={activeProject} className="pagination-hidden" count={4} shape="rounded" variant="outlined" />
+      {activeProject === 4 && <ProjectFour />}
+      {activeProject === 5 && <ProjectFive />}
+      <Pagination onChange={(e)=> changeProjectPage(Number(e.target.textContent))} page={activeProject} className="pagination-hidden" count={5} shape="rounded" variant="outlined" />
     </StyledProject>
     </ProjectProvider.Provider>
   )
