@@ -46,8 +46,17 @@ width : 100%;
     transition : .5s ease-in-out;
     transition-delay : 1.5s;
 }
+#pageCount {
+    display: none;
+}
 @media screen and (max-width : 700px) {
-    padding-top : 2rem;
+    #outerContainer {
+    padding-top : 1rem;
+    padding-bottom : 3rem;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    }
     .active {
         display : block;
         width : 80vw;
@@ -56,4 +65,31 @@ width : 100%;
         display : none;
     }
 }
+
+@media screen and (max-width : 700px) {
+
+    #pageCount {
+        margin-top : 2rem;
+        display: block;
+        z-index: 2;
+        border-radius: 1rem;
+        padding : .5rem;
+        background-color: transparent;
+    }
+    #pageCount:hover {
+        box-shadow: 0 0 1em gray;
+        background-color : whitesmoke;
+        transition: .1s ease-in-out;
+    }
+}
+.hidden-page {
+    opacity : 0;
+ }
+ .seen-page {
+    opacity : 1;
+    transition : .4s ease-in-out;
+    transition-delay : 1s;
+ }
+
+
 `

@@ -32,6 +32,7 @@ a {
 .rows {
     display: flex;
     flex-direction: column;
+    width: 90vw !important; 
     align-items: center;
     transition: .1s ease-in-out;
 }
@@ -41,32 +42,3 @@ a {
     border-radius: 2rem;
     box-shadow: 0 0 2em gray;
 }
-#pageCount {
-    display: none;
-}
-
-@media screen and (max-width : 700px) {
-    #pageCount {
-        display: block;
-        position : absolute;
-        z-index: 2;
-        background-color: gray;
-        border-radius: 1rem;
-        padding : 1rem;
-        top :230vh;
-    }
-    #pageCount:hover {
-        background-color: white;
-        box-shadow: 0 0 1em gray;
-        transition: .1s ease-in-out;
-    }
-}
-.hidden-page {
-    opacity : 0;
- }
- .seen-page {
-    opacity : 1;
-    transition : .4s ease-in-out;
-    transition-delay : 1s;
- }
-
