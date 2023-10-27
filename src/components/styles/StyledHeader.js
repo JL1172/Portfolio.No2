@@ -175,7 +175,10 @@ flex-direction : column;
     }
 }
 @media screen and (max-width: 700px){
-    
+#conditional1 {
+    height : 4rem;
+    align-items : center;
+}   
 #content {
 margin-bottom : 5rem;
 width : 100%;
@@ -205,7 +208,7 @@ h1 {
     .drawer {
         position : fixed;
         margin-bottom : 3rem;
-        padding-top : 2rem;
+        padding-top : 4rem;
         z-index : 1;
         border-bottom : 1px solid #EADFDF;
         opacity : 1;
