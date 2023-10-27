@@ -103,7 +103,7 @@ margin-top : 2rem;
 }
 .show-stack {
     opacity : 1;
-    transition-delay : 1s;
+    transition-delay : .7s;
 }
 #stackMe {
     font-size : 30px;

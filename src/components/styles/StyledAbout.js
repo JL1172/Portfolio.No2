@@ -79,7 +79,7 @@ width : 100%;
         display: block;
         z-index: 2;
         border-radius: 1rem;
-        padding : .5rem;
+        padding : .2rem;
         margin-bottom : 1rem;
         color : white;
         background-color : darkgray;
