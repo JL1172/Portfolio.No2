@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { BiLineChart, BiLinkExternal, BiLogoBootstrap, BiLogoCss3, BiLogoReact, BiLogoRedux } from "react-icons/bi";
-import { stockMarketUrl } from '../../URLS/url-folder';
+import { stockMarketIMG, stockMarketUrl } from '../../URLS/url-folder';
 import { SiAxios, SiStyledcomponents } from "react-icons/si";
 
 const ExpandMore = styled((props) => {
@@ -58,7 +58,7 @@ export default function ProjectOne() {
             <CardMedia
                 id="imgProject"
                 component="img"
-                image="https://onedrive.live.com/embed?resid=968B4C77C495090B%211084846&authkey=%21AH1_-T0KEBFZrEM&width=1904&height=952"
+                image={stockMarketIMG}
                 alt="Stock Market App"
             />
             <CardContent>
