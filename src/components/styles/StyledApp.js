@@ -39,7 +39,9 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
     min-height : 50vh;
     transition-delay : 1.5s;
  }
- 
+
+ /* styled contact */
+
 
 
 /* for styledstack */
