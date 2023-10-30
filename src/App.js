@@ -14,7 +14,15 @@ function App() {
   const [toolTip, setToolTip] = useState("");
   const [currentPage,setCurrentPage] = useState(1);
   const changePage = (e) => {
-    setCurrentPage(Number(e.target.textContent));
+    if (e.target.innerHTML === `<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>`) {
+      setCurrentPage((currentPage)=>currentPage + 1)
+    } else if (e.target.innerHTML === `<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>`) {
+      if (currentPage > 1) {
+        setCurrentPage((currentPage => currentPage - 1))
+      }
+    } else {
+      setCurrentPage(Number(e.target.textContent));
+    }
   }
   const changeRender = (val) => {
     setRender(val);

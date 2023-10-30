@@ -23,7 +23,7 @@ padding-bottom : 4rem;
     color : black !important;
     transition : 1s;
     z-index : -5;
-    transition-delay : 1s;
+    transition-delay : .8s;
     font-size : 20px;
 }
 .project-cards-hidden {
@@ -38,7 +38,7 @@ padding-bottom : 4rem;
     height : fit-content;
     width : 50vw;
 
-    transition-delay : 1.5s;
+    transition-delay : .8s;
     z-index : 2;
     background-color : (34, 34, 34);
     padding : 1rem;
@@ -61,7 +61,7 @@ padding-bottom : 4rem;
     padding : .2rem;
     background-color : whitesmoke;
     transition : .2s;
-    transition-delay : 1.2s;
+    transition-delay : .8s;
     &:hover {
         box-shadow  : 0 0 .6em darkgray;
         transition : .2s ease-in-out;
@@ -91,7 +91,7 @@ padding-bottom : 4rem;
     width : 90vw;
     min-height : 50vh;
     height : fit-content;
-    transition-delay : 1.5s;
+    transition-delay : .8s;
     z-index : 2;
     padding : 1rem;
 }
@@ -106,7 +106,7 @@ padding-bottom : 4rem;
     width : 98vw;
     min-height : 50vh;
     height : fit-content;
-    transition-delay : 1.5s;
+    transition-delay : .8s;
     z-index : 2;
     padding : 1rem;
 }
