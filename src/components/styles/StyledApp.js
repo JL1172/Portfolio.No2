@@ -13,7 +13,7 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
  .hidden {
     opacity : 0 !important;
     transform : scaleY(0%);
-    transition : all .5s;
+    transition : all .4s;
  }
  .show {
     opacity : 1 !important;

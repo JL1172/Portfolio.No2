@@ -21,7 +21,7 @@ text-align : center;
     transition : .2s ease-in-out;
     transform : scaleY(100%);
     margin-top : 5rem;
-    transition-delay : 1s;
+   transition-delay : .5s;
 }
 .text-hidden {
     opacity : 0;
@@ -30,7 +30,7 @@ text-align : center;
 .text-shown {
     opacity : 1;
     transition : .2s ease-in-out;
-    transition-delay : 1s;
+   transition-delay : .5s;
 }
 @media screen and (max-width: 1200px) {
    
