@@ -47,7 +47,7 @@ width : 100%;
     opacity : 1;
     background-color : white;
     transition : .5s ease-in-out;
-    transition-delay : 1s;
+    transition-delay : .8s;
 }
 #pageCount {
     display: none;
@@ -95,7 +95,7 @@ width : 100%;
  .seen-page {
     opacity : 1;
     transition : .4s ease-in-out;
-    transition-delay : 1s;
+    transition-delay : .6s;
  }
  .span {
    color : black;
