@@ -37,7 +37,7 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
     justify-content  : space-evenly;
     min-height : 50vh;
     transition : .5s ease-in-out;
-    transition-delay : .8s;
+    transition-delay : .6s;
  }
 
  /* styled contact */
