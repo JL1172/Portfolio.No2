@@ -25,19 +25,19 @@ background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-g
  .hidden-text {
    opacity : 0 !important;
    color : black;
-    transition : all 2s;
  }
  .shown-text {
    opacity : 1 !important;
     transform-origin : bottom;
     background-color : black;
+    z-index  : 2;
     color : white;
-    filter : blur(0);
     display : flex;
     flex-direction : column;
     justify-content  : space-evenly;
     min-height : 50vh;
-    transition-delay : 1.5s;
+    transition : .5s ease-in-out;
+    transition-delay : .8s;
  }
 
  /* styled contact */

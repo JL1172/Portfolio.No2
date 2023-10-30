@@ -47,7 +47,7 @@ width : 100%;
     opacity : 1;
     background-color : white;
     transition : .5s ease-in-out;
-    transition-delay : 1.5s;
+    transition-delay : 1s;
 }
 #pageCount {
     display: none;

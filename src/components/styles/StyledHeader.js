@@ -43,7 +43,7 @@ flex-direction : column;
         content : "";
         position : absolute;
         border : 1px solid rgb(68, 65, 65);
-        top : 1.3rem;
+        top : 1.4rem;
         left : 1.9rem;
         transition : .1s ease-in-out;
         opacity : 0;
@@ -58,7 +58,7 @@ flex-direction : column;
     .two::before {
         content : "";
         position : absolute;
-        top : 1.3rem;
+        top : 1.4rem;
         left : 2.4rem;
         opacity : 0;
         border : 1px solid rgb(68, 65, 65);
@@ -74,7 +74,7 @@ flex-direction : column;
     .three::before {
         content : "";
         position : absolute;
-        top : 1.3rem;
+        top : 1.4rem;
         left : 3rem;
         border : 1px solid rgb(68, 65, 65);
         opacity : 0;
@@ -89,7 +89,7 @@ flex-direction : column;
     .four::before {
         content : "";
         position : absolute;
-        top : 1.3rem;
+        top : 1.4rem;
         left : 2.4rem;
         border : 1px solid rgb(68, 65, 65);
         opacity : 0;
@@ -103,7 +103,7 @@ flex-direction : column;
     .five::before {
         content : "";
         position : absolute;
-        top : 1.3rem;
+        top : 1.4rem;
         left : 3rem;
         opacity : 0;
         border : 1px solid rgb(68, 65, 65);

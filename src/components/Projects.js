@@ -13,8 +13,8 @@ export default function Projects(props) {
   const { render, changeRender } = useContext(GlobalContext);
   const [activeProject,setActiveProject] = useState(1); 
   const [outOfFocus,setOutOfFocus] = useState(true); 
-  const changeProjectPage = (value) => {
-    setActiveProject(value); 
+  const changeProjectPage = (e,value) => {
+      setActiveProject(Number(value)); 
   }
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -75,7 +75,7 @@ export default function Projects(props) {
       {activeProject === 3 && <ProjectThree />}
       {activeProject === 4 && <ProjectFour />}
       {activeProject === 5 && <ProjectFive />}
-      <Pagination onChange={(e)=> changeProjectPage(Number(e.target.textContent))} page={activeProject} className="pagination-hidden" count={5} shape="rounded" variant="outlined" />
+      <Pagination onChange={changeProjectPage} page={activeProject} className="pagination-hidden" count={5} variant="outlined" />
     </StyledProject>
     </ProjectProvider.Provider>
   )
