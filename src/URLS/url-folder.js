@@ -13,5 +13,5 @@ export const portfolioURL = "https://github.com/JL1172/Portfolio";
 export const portfolioIMG = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084849&authkey=%21ABoqbaZzNbEPGgo&width=1894&height=939";
 export const githubPicture = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084850&authkey=%21AMZOBhhpTfH1NqY&width=1403&height=801";
 export const githubURL = "https://github.com/JL1172";
-export const resumeURL = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084852&authkey=!AJ1kdj_X8ynjd5U&em=2"
+export const resumeURL = "https://1drv.ms/w/s!AgsJlcR3TIuWwp5xkVgeMYJyfCW5UQ?e=Uuu9KS";
 export const linkedinUrl = "https://www.linkedin.com/in/jacob-lang1172/";
