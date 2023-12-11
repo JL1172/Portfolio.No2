@@ -7,7 +7,9 @@ import ProjectTwo from "./extra/ProjectTwo";
 import ProjectThree from "./extra/ProjectThree";
 import ProjectFour from "./extra/ProjectFour"; 
 import ProjectFive from "./extra/ProjectFive";
+import ProjectSix from "./extra/ProjectSix";
 import { ProjectProvider } from "../contexts/ProjectContext";
+import ProjectSeven from "./extra/ProjectSeven";
 
 export default function Projects(props) {
   const { render, changeRender } = useContext(GlobalContext);
@@ -70,12 +72,14 @@ export default function Projects(props) {
     <ProjectProvider.Provider value = {{activeProject}}>
     <StyledProject id="projects" className={render === "projects" ? "show" : "hidden"}>
       <div className="project-title-shown" >Projects</div>
-      {activeProject === 1 && <ProjectOne />}
-      {activeProject === 2 && <ProjectTwo />}
+      {activeProject === 1 && <ProjectSix />}
+      {activeProject === 2 && <ProjectSeven />}
       {activeProject === 3 && <ProjectThree />}
-      {activeProject === 4 && <ProjectFour />}
-      {activeProject === 5 && <ProjectFive />}
-      <Pagination onChange={changeProjectPage} page={activeProject} className="pagination-hidden" count={5} variant="outlined" />
+      {activeProject === 4 && <ProjectOne />}
+      {activeProject === 5 && <ProjectFour />}
+      {activeProject === 6 && <ProjectTwo />}
+      {activeProject === 7 && <ProjectFive />}
+      <Pagination onChange={changeProjectPage} page={activeProject} className="pagination-hidden" count={7} variant="outlined" />
     </StyledProject>
     </ProjectProvider.Provider>
   )

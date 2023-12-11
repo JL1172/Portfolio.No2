@@ -8,10 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';//eslint-disable-line
 import { BiLineChart, BiLinkExternal, BiLogoBootstrap, BiLogoCss3, BiLogoReact, BiLogoRedux } from "react-icons/bi";
 import { stockMarketIMG, stockMarketUrl } from '../../URLS/url-folder';
 import { SiAxios, SiStyledcomponents } from "react-icons/si";
+import { ProjectProvider } from '../../contexts/ProjectContext';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -26,26 +27,27 @@ const ExpandMore = styled((props) => {
 
 
 export default function ProjectOne() {
-    useEffect(() => {
-        const observer4 = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('project-cards-shown');
-                } else {
-                    entry.target.classList.remove("project-cards-shown");
-                }
-            })
-        })
-        const project_cards_hidden = document.querySelectorAll(".project-cards-hidden");
-        project_cards_hidden.forEach(el => observer4.observe(el))
-    }, [])
+    const { activeProject } = useContext(ProjectProvider);
+    // useEffect(() => {
+    //     const observer4 = new IntersectionObserver((entries) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add('project-cards-shown');
+    //             } else {
+    //                 entry.target.classList.remove("project-cards-shown");
+    //             }
+    //         })
+    //     })
+    //     const project_cards_hidden = document.querySelectorAll(".project-cards-hidden");
+    //     project_cards_hidden.forEach(el => observer4.observe(el))
+    // }, [])
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
     return (
-        <Card style={{ backgroundColor: "black", outline: "2px solid rgb(27, 27, 27)" }} className="project-cards-hidden">
+        <Card style={{ backgroundColor: "black", outline: "2px solid rgb(27, 27, 27)" }} className="project-cards-shown" id={activeProject ? "activeProject" : "notActiveProject"}>
             <CardHeader
                 action={
                     <IconButton aria-label="settings">
