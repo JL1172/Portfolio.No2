@@ -3,7 +3,7 @@ import { StyledProject } from "./styles/StyledProjects"
 import { GlobalContext } from "../contexts/GlobalContext";
 import { Pagination } from "@mui/material";
 import ProjectOne from "./extra/ProjectOne";
-import ProjectTwo from "./extra/ProjectTwo";
+// import ProjectTwo from "./extra/ProjectTwo";
 import ProjectThree from "./extra/ProjectThree";
 import ProjectFour from "./extra/ProjectFour"; 
 import ProjectFive from "./extra/ProjectFive";
@@ -77,9 +77,9 @@ export default function Projects(props) {
       {activeProject === 3 && <ProjectThree />}
       {activeProject === 4 && <ProjectOne />}
       {activeProject === 5 && <ProjectFour />}
-      {activeProject === 6 && <ProjectTwo />}
-      {activeProject === 7 && <ProjectFive />}
-      <Pagination onChange={changeProjectPage} page={activeProject} className="pagination-hidden" count={7} variant="outlined" />
+      {/* {activeProject === 6 && <ProjectTwo />} DO NOT REALLY THINK THIS IS THAT QUALITY OF A PROJECT TBH */} 
+      {activeProject === 6 && <ProjectFive />}
+      <Pagination onChange={changeProjectPage} page={activeProject} className="pagination-hidden" count={6} variant="outlined" />
     </StyledProject>
     </ProjectProvider.Provider>
   )

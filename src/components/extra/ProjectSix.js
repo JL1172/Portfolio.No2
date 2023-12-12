@@ -61,7 +61,7 @@ export default function ProjectSix() {
                 titleTypographyProps={{ color: "white" }}
                 title="Expense Tracker"
             />
-            <iframe title = 'expense tracker' id = "imgProject" src={expenseTrackerVideo} frameborder="0" style={{width: '100%', height: '30rem'}} ></iframe> 
+            <iframe title = 'expense tracker' id = "imgProject" src={expenseTrackerVideo} frameborder="0" style={{width: '100%', height: '30rem'}} >Video loading...</iframe> 
             <CardContent>
                 <Typography style={{ color: "white", zIndex: "2", backgroundColor: "black" }} variant="body2" color="text.secondary">
                     Expense Tracker is a web application built using React, Express, Bcrypt, Jsonwebtoken, Styled Components, Postgres, Knex, PgAdmin4, Tailwind CSS, and Material-UI. It serves as an efficient tool for tracking and managing expenses, providing features for authentication, authorization, access controls, and a RESTful API for communication between the front end and the relational database.

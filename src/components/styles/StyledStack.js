@@ -143,4 +143,10 @@ padding-bottom : 4rem;
     transition : .2s ease-in-out;
     transition-delay : .4s;
 } 
+@media screen and (max-width: 500px) {
+ .textContent {
+    width: 31.5vw;
+    text-align: center;
+ }   
+}
 `

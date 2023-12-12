@@ -15,6 +15,7 @@ import { IoLogoElectron } from "react-icons/io5";
 import { SiStyledcomponents } from "react-icons/si";
 import { GoDatabase } from "react-icons/go";
 import { ProjectProvider } from '../../contexts/ProjectContext';
+import { ColorRing } from 'react-loader-spinner';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -65,7 +66,7 @@ export default function ProjectSeven() {
                 image={jwtProjectIMG}
                 alt="Npm Manger/CRA Bundler"
             /> */}
-             <iframe title = 'expense tracker' id = "imgProject" src={npmManagerVideo} frameborder="0" style={{width: '100%', height: '30rem'}} ></iframe> 
+             <iframe title = 'expense tracker' id = "imgProject" src={npmManagerVideo} frameborder="0" style={{width: '100%', height: '30rem'}} allowFullScreen></iframe> 
             <CardContent>
                 <Typography style={{ color: "white", zIndex: "2", backgroundColor: "black" }} variant="body2" color="text.secondary">
                     •	Developed an Electron application to automate the dynamic startup of Node.js applications located in different directories, significantly improving development efficiency: used child-process module in node.
