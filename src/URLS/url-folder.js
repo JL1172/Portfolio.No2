@@ -11,7 +11,11 @@ export const bookStoreIMG = "https://onedrive.live.com/embed?resid=968B4C77C4950
 export const portfolioWebsiteURL = "https://my-portfolio-jl1172.vercel.app/"; 
 export const portfolioURL = "https://github.com/JL1172/Portfolio"; 
 export const portfolioIMG = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084849&authkey=%21ABoqbaZzNbEPGgo&width=1894&height=939";
-export const githubPicture = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084850&authkey=%21AMZOBhhpTfH1NqY&width=1403&height=801";
+export const githubPicture = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085401&authkey=%21ACTre6pMtQj2nNo&width=1370&height=957";
 export const githubURL = "https://github.com/JL1172";
 export const resumeURL = "https://1drv.ms/w/s!AgsJlcR3TIuWwp5xkVgeMYJyfCW5UQ?e=Uuu9KS";
 export const linkedinUrl = "https://www.linkedin.com/in/jacob-lang1172/";
+export const expenseTrackerUrl = "https://github.com/JL1172/Expense-Tracker";
+export const expenseTrackerVideo = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085403&authkey=!ALbIXz9N_n0FD6o";
+export const npmManagerVideo = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085402&authkey=!AJM__LibK_QNwiQ";
+export const npmManagerUrl = 'https://www.linkedin.com/posts/jacob-lang1172_react-nodejs-expressjs-activity-7130240165989507073-aLIs?utm_source=share&utm_medium=member_desktop&controls=0';
