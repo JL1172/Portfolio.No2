@@ -13,7 +13,7 @@ export const portfolioURL = "https://github.com/JL1172/Portfolio";
 export const portfolioIMG = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211084849&authkey=%21ABoqbaZzNbEPGgo&width=1894&height=939";
 export const githubPicture = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085401&authkey=%21ACTre6pMtQj2nNo&width=1370&height=957";
 export const githubURL = "https://github.com/JL1172";
-export const resumeURL = "https://1drv.ms/w/s!AgsJlcR3TIuWwp5xkVgeMYJyfCW5UQ?e=Uuu9KS";
+export const resumeURL = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085404&authkey=!AOzpy1uAicxzEEo&em=2";
 export const linkedinUrl = "https://www.linkedin.com/in/jacob-lang1172/";
 export const expenseTrackerUrl = "https://github.com/JL1172/Expense-Tracker";
 export const expenseTrackerVideo = "https://onedrive.live.com/embed?resid=968B4C77C495090B%211085403&authkey=!ALbIXz9N_n0FD6o";
