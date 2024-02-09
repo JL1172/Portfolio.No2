@@ -21,11 +21,11 @@ const Header = (props) => {
             <div id="conditional1"  >
                 <h3><a href = "#home">Jacob's Portfolio</a></h3>
                 <div id="links">
-                    <div className="link"><a onClick={(e) => changeRender("about", e)} className="link one" href="#about"><CgProfile />About /</a></div>
-                    <div className="link"><a onClick={(e) => changeRender("stack", e)} className="link three" href="#stack"><GoStack />Tech Stack /</a></div>
-                    <div className="link"><a onClick={(e) => changeRender("projects", e)} className="link two" href="#projects"><GrProjects />Projects /</a></div>
-                    <div className="link"><a onClick={(e) => changeRender("resume", e)} className="link four" href="#resume"><FaRegNewspaper /> Resume /</a></div>
-                    <div className="link"><a onClick={(e) => changeRender("contact", e)} className="link five" href="#contact"> <MdOutlineContacts /> Contact Me /</a></div>
+                    <div className="link"><a onClick={(e) => changeRender("about", e)} className="link one" href="#about"><CgProfile />About </a></div>
+                    <div className="link"><a onClick={(e) => changeRender("stack", e)} className="link three" href="#stack"><GoStack />Tech Stack </a></div>
+                    <div className="link"><a onClick={(e) => changeRender("projects", e)} className="link two" href="#projects"><GrProjects />Projects </a></div>
+                    <div className="link"><a onClick={(e) => changeRender("resume", e)} className="link four" href="#resume"><FaRegNewspaper /> Resume </a></div>
+                    <div className="link"><a onClick={(e) => changeRender("contact", e)} className="link five" href="#contact"> <MdOutlineContacts /> Contact Me </a></div>
                 </div>
 
                 <span onClick={changeVisibility} id="icon" className="material-symbols-outlined">

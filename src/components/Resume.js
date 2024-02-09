@@ -3,6 +3,7 @@ import { StyledResume } from "./styles/StyledResume";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { resumeURL } from "../URLS/url-folder";
 import { Button } from "@mui/material";
+
 export default function Resume(props) {
   const { render, changeRender } = useContext(GlobalContext);
   useEffect(() => {

@@ -23,19 +23,19 @@ width : 100%;
 }
 #container1 {
     position : relative;
-    width : 60vw;
+    width : 65dvw;
     text-indent : 1.5rem;
 }
 
 #container2 {
     position : relative;
-    width : 60vw;
+    width : 65dvw;
     text-indent : 1.5rem;
 }
 
 #container3 {
     position : relative;
-    width : 60vw;
+    width : 65dvw;
     text-indent : 1.5rem;
 }
 

@@ -17,6 +17,7 @@ import { DiPostgresql } from "react-icons/di";
 import { SiNestjs } from "react-icons/si";
 import {SiJest} from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 export default function Stack(props) {
   const { render, changeRender } = useContext(GlobalContext);
@@ -84,6 +85,7 @@ export default function Stack(props) {
         <div className="hidden-card-icon"><Card  className={vis === "Nestjs" ? "blue cardsAll" : "cardsAll"} onClick = {()=>advancedClick("Nestjs")} >{vis === "Nestjs" ? <div className="textContent">Nestjs</div>:<SiNestjs className="iconsCards" id = "dbIcon"/>}</Card></div>
         <div className="hidden-card-icon"><Card  className={vis === "Prisma" ? "blue cardsAll" : "cardsAll"} onClick = {()=>advancedClick("Prisma")} >{vis === "Prisma" ? <div className="textContent">Prisma</div>:<SiPrisma className="iconsCards" id = "dbIcon"/>}</Card></div>
         <div className="hidden-card-icon"><Card  className={vis === "TypeScript" ? "blue cardsAll" : "cardsAll"} onClick = {()=>advancedClick("TypeScript")} >{vis === "TypeScript" ? <div className="textContent">TypeScript</div>:<SiTypescript className="iconsCards" style={{color: "dodgerblue"}}/>}</Card></div>
+        <div className="hidden-card-icon"><Card  className={vis === "Java" ? "blue cardsAll" : "cardsAll"} onClick = {()=>advancedClick("Java")} >{vis === "Java" ? <div className="textContent">Java</div>:<FaJava className="iconsCards" style={{color: "orange"}}/>}</Card></div>
       </div>
       
     </StyledStack>
